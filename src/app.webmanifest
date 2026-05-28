@@ -1,0 +1,16 @@
+{
+    "name": "Kim FC",
+	"short_name": "Kim FC",
+    "icons": [
+        {
+            "src": "./images/icon.svg",
+            "sizes": "any",
+            "purpose": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "./",
+    "display": "standalone"
+}

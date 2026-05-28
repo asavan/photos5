@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>5 photos</title>
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="5 photos">
+    <link rel="manifest" href="./app.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link id="favicon" rel="icon" href="./images/icon.svg" sizes="any" type="image/svg+xml">
+    <link rel="manifest" href="./app.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="./images/icon.svg">
+</head>
+<body>
+<main>
+    <div class="poster">
+        <!-- Неоновая вывеска -->
+        <div class="neon-sign">+ Free smile</div>
+
+        <!-- Логотип -->
+        <div class="logo-area">
+            <div class="logo-top">— THE —</div>
+            <div class="logo-main">Memories</div>
+            <div class="logo-sub">company</div>
+        </div>
+
+        <!-- Рекламное предложение -->
+        <div class="promo-content">
+            <div class="text-big" contenteditable="true">5 PHOTOS</div>
+            <div class="text-big text-white" contenteditable="true">on your phone</div>
+            <div class="text-plus">or</div>
+            <div class="text-big" contenteditable="true">1 VIDEO</div>
+            <div class="text-big text-white" contenteditable="true">up to 4 min</div>
+
+            <!-- Блок цены с реалистичным рваным SVG-эффектом -->
+            <div class="price-container">
+                <!-- Векторная подложка рваной кисти с шумом -->
+                <svg class="splash-bg" viewBox="0 0 200 70" preserveAspectRatio="none">
+                    <defs>
+                        <!-- Специальный фильтр, который разрывает края вектора мелкими зазубринами и каплями -->
+                        <filter id="grunge-edges">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves = "3" result="noise" />
+                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G" />
+                        </filter>
+                        <!-- Градиент как на плакате -->
+                        <linearGradient id="red-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#ff1a1a;" />
+                            <stop offset="100%" style="stop-color:#b30000;" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Базовая фигура плашки, которая будет искажена фильтром -->
+                    <rect x="10" y="8" width="180" height="54" fill="url(#red-grad)" filter="url(#grunge-edges)" />
+                </svg>
+
+                <!-- Текст цены -->
+                <span class="price-text" contenteditable="true">20K vnd</span>
+                <!-- Новая строчка ONLY -->
+                <span class="price-only">ONLY</span>
+            </div>
+        </div>
+
+        <!-- Декоративная плашка -->
+        <div class="bottom-bar">
+            have a nice day
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="log"></div>
+</footer>
+</body>
+</html>
