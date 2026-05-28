@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5 photos</title>
     <style>
-
-		@import url('https://googleapis.com');
-		@font-face {
+        /* Принудительно загружаем оригинальный Impact для Android и iOS устройств */
+        @font-face {
             font-family: 'Impact Web';
             src: url('https://gstatic.com') format('woff2'),
                  url('https://cloudflare.com') format('truetype');
             font-weight: bold;
             font-style: normal;
         }
+
+        @import url('https://googleapis.com');
 
         * {
             box-sizing: border-box;
@@ -99,8 +100,9 @@
         }
 
         .logo-main {
-            font-family: 'Impact Web', 'Impact', sans-serif;
-            font-size: clamp(32px, 8vw, 42px);
+            font-family: 'Impact Web', 'Impact', sans-serif; /* Подключаем скачанный Impact */
+            font-weight: 900;
+            font-size: clamp(34px, 8.5vw, 44px);
             color: #fff;
             text-transform: uppercase;
             text-shadow: 3px 3px 0px #ff0000, 6px 6px 0px #000;
@@ -125,7 +127,8 @@
         }
 
         .text-big {
-            font-family: 'Impact Web', 'Impact', sans-serif;
+            font-family: 'Impact Web', 'Impact', sans-serif; /* Подключаем скачанный Impact */
+            font-weight: 900;
             font-size: clamp(36px, 9vw, 52px);
             color: #ffcc00;
             text-transform: uppercase;
@@ -152,20 +155,18 @@
             margin-top: 10px;
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-			flex-direction: column; /* Элементы цены теперь выстраиваются в столбик */
             align-items: center;
-            /* Сильный наклон всей зоны цены в стиле оригинального постера */
             transform: rotate(-4deg) skewX(-6deg) scale(1.1);
-            /* Жесткая черная тень под всей формой всплеска */
             filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.9));
         }
 
         /* SVG фоновый всплеск */
         .splash-bg {
             position: absolute;
-            width: 110%;
-            height: 140%;
+            width: 115%;
+            height: 145%;
             z-index: 1;
             pointer-events: none;
         }
@@ -174,18 +175,22 @@
         .price-text {
             position: relative;
             z-index: 2;
-            font-family: 'Impact Web', 'Impact', sans-serif;
+            font-family: 'Impact Web', 'Impact', sans-serif; /* Подключаем скачанный Impact */
+            font-weight: 900;
             font-size: clamp(54px, 14vw, 76px);
             color: #fff;
             letter-spacing: 2px;
             text-shadow: 3px 3px 0 #000, -1px -1px 0 #000;
-            padding: 5px 20px;
+            line-height: 0.9;
+            padding-top: 5px;
         }
-		        /* Мелкая надпись ONLY */
+
+        /* Мелкая надпись ONLY */
         .price-only {
             position: relative;
             z-index: 2;
-            font-family: 'Impact Web', 'Impact', sans-serif;
+            font-family: 'Impact Web', 'Impact', sans-serif; /* Подключаем скачанный Impact */
+            font-weight: 900;
             font-size: clamp(20px, 5vw, 26px);
             color: #fff;
             text-transform: uppercase;
@@ -242,7 +247,7 @@
             display: block;
         }
 
-        /* Желтая плашка в самом низу */
+        /* Декоративная плашка в самом низу */
         .bottom-bar {
             position: absolute;
             bottom: 0;
